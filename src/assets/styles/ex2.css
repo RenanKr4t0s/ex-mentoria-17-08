@@ -1,0 +1,18 @@
+.section-all{
+    /* estilização geral das sessões */
+    margin: 20px;
+    align-content: center;
+    height: 100px;
+    width: 500px;
+    background-color: #80ced6;
+}
+.section02{
+    text-align: right;
+}
+.section03{
+    text-align: center;
+}
+.section04{
+    text-align: center;
+    /* Não entendi o justificar... */
+}

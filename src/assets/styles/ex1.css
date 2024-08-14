@@ -1,0 +1,36 @@
+.div-all{
+    /* 1. todas as divs 20px da esquerda */
+    margin-left: 20px;
+    border: 2px solid;
+
+    /* estilização */
+    height: 100px;
+    width: 150px;
+}
+.div01{
+    /* 2 Div1 distante da Div2 verticalmente 12px */
+    margin-bottom: 20px;
+
+    /* 4 Conteudo da div01 centralizado em x e y */
+    align-content: center;
+    text-align: center;
+
+    /* estilização */
+    background-color: #d5f4e6;
+}
+.div02{
+    /* 3 Div2 distante da Div3 verticalmente 4px */
+    margin-bottom: 4px;
+
+    /* estilização */
+    background-color: #80ced6;
+}
+.div03{
+    /* estilização */
+    background-color: #fefbd8;
+}
+.div02, .div03{
+    /* Conteudo das divs 2 e 3 distantes do topo e lateral esquerda em 8px */
+    padding-top: 8px;
+    padding-left: 8px;
+}

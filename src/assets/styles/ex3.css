@@ -1,0 +1,15 @@
+.caixas{
+    width: 200px;
+    border: 4px solid #80ced6;
+    padding: 12px;
+    
+    /* Estilização */
+    margin: 10px;
+    background-color: #d5f4e6;
+}
+.caixa01{
+    box-sizing: border-box;
+}
+.caixa02{
+    box-sizing: content-box;
+}
