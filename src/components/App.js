@@ -21,6 +21,9 @@ function App() {
     <div>
       <NavBarSimple siteName="Ex. Mentoria 17-08-2024" domRouter/>
       <Routes>
+      <Route path='/' element={
+          <h1>Esse é o Home</h1>
+        } />
         <Route path='/ex1' element={
           <Ex1 />
         } />

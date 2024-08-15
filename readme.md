@@ -1,10 +1,12 @@
-# Ex Mentoria 17/08/2024
+# Exercícios da Mentoria 17/08/2024
 Exercícios propostos pelo professor Alisson para treinarmos HTML CSS e JS.
 Fiz os meus em React como desafios para a mentoria de 17/08/2024
 
 ## Pendencias
-- Fazer o Ex.05
 - Fazer o Ex.06
+- Acertar os layouts
+- Colocar propriedade para duas casas decimais em valores
+- Criar uma Home
 
 ## Tecnologias Utilizadas
 
