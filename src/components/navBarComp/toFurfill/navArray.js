@@ -1,26 +1,26 @@
 let navArray = [
     {
-      name: "Exercício 1",
+      name: "Ex1",
       href: "/ex1"
     },
     {
-        name: "Exercício 2",
+        name: "Ex2",
         href: "/ex2"
     },
     {
-      name: "Exercício 3",
+      name: "Ex3",
       href: "/ex3"
     },
     {
-      name: "Exercício 4",
+      name: "Ex4",
       href: "/ex4"
     },
     {
-      name: "Exercício 5",
+      name: "Ex5",
       href: "/ex5"
     },
     {
-      name: "Exercício 6",
+      name: "Ex6",
       href: "/ex6"
     },
   ]

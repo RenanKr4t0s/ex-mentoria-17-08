@@ -42,8 +42,8 @@ function Ex4(){
             </form>
             <div className="mx-5 p-2 row col-4 text-center">
                 <button className="btn btn-danger mb-3" onClick={handleReset}>Reset</button>
-                {peso>0&& peso<=50 ? <h1>Para o peso de {peso} não há multa</h1>: 
-                resultado !== null && <h1>A multa a ser paga é de R${resultado} </h1>}
+                {peso>0&& peso<=50 ? <h1 className="alert alert-info">Para o peso de {peso} não há multa</h1>: 
+                resultado !== null && <h1 className="alert alert-danger">A multa a ser paga é de R${resultado} </h1>}
             </div>
         </div>
     )

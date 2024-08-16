@@ -6,7 +6,6 @@ function Ex6(){
     const [dia, setDia]=useState(0)
     const [resultado, setResultado]=useState(null)
     const [selectedOption, setSelectedOption] = useState('');
-    const [increase, sesIncrease] = useState(0)
     const [errorCheck, setErrorCheck] = useState(false)
     
     function handleOptionChange(e){
@@ -24,23 +23,29 @@ function Ex6(){
             case 1:
                 return 1;
             default:
-                setErrorCheck(true)
                 return "Valor não mapeado";
+            }
         }
-    }
-
-    async function handleSubmit(e) {
-        e.preventDefault();
-        if (dia>7 || dia<0){
-            setResultado(null)
+        function handleSubmit(e) {
+            e.preventDefault();
+            setErrorCheck(false);
+            if (dia>7 || dia<1){
+                setResultado(null)
+                setErrorCheck(true)
+        }else {
+            const increase = selectedOption === "Lançamento"?1.15:1;
+            const desconto = weekDecrease(dia)
+            const calculado = (desconto * preco) * increase
+            setResultado(calculado);
         }
-        if (selectedOption === "Lançamento") {
-            await sesIncrease(1.15);
-        } else if (selectedOption === "Comum") {
-            await sesIncrease(1);
-        }
-        setResultado(((await weekDecrease(dia)) * preco) * increase);
-        console.log(resultado);
+        
+        // if (selectedOption === "Lançamento") {
+        //      sesIncrease(1.15);
+        // } else if (selectedOption === "Comum") {
+        //      sesIncrease(1);
+        // }
+        // setResultado(calculado);
+        // console.log(resultado);
     }
     return(
         <div>
@@ -48,23 +53,28 @@ function Ex6(){
                 <h1>Exercício 6</h1>
                 <h2>Locadora de filmes.</h2>
                 <br />
-                <h4>Regras de cobrança:</h4>
-                <ol>
-                    <li>Seg, Ter, Qui desconto de 40%</li>
-                    <li>Qua, Sex, Sab e Dom preço normal</li>
-                    <li>Fitas comuns preço normal</li>
-                    <li>Fitas lançamento 15% sobre preço</li>
-                </ol>
-                <br />
-                <h4>Regras de construção:</h4>
-                <ol>
-                    <li>Usar switch e if else</li>
-                    <li>Aplicar acréscimo e depois desconto</li>
-                    <li>Exibir Erro se dia ou categoria incorretos</li>
-                </ol>
+                <div className="d-flex">
+                    <div className="col-3">
+                        <h4>Regras de cobrança:</h4>
+                        <ol>
+                            <li>Seg, Ter, Qui desconto de 40%</li>
+                            <li>Qua, Sex, Sab e Dom preço normal</li>
+                            <li>Fitas comuns preço normal</li>
+                            <li>Fitas lançamento 15% sobre preço</li>
+                        </ol>
+                    </div>
+                    <div className="col-3">
+                        <h4>Regras de construção:</h4>
+                        <ol>
+                            <li>Usar switch e if else</li>
+                            <li>Aplicar acréscimo e depois desconto</li>
+                            <li>Exibir Erro se dia ou categoria incorretos</li>
+                        </ol>
+                    </div>
+                </div>
             </div>
-            {errorCheck !== false ? <h1>Valor inserido em "Qual o dia da semana" incorreto!</h1>:
-            resultado !== null && <h1>O valor a ser pago é de R${resultado.toFixed(2)} </h1>}
+            {errorCheck !== false ? <h2 className="alert alert-danger col-5 mx-5">Dia da semana incorreto!</h2>:
+            resultado !== null && <h2 className="alert alert-info col-5 mx-5">O valor a ser pago é de R${resultado.toFixed(2)} </h2>}
             <form onSubmit={handleSubmit} className="p-2 container mx-5 row text-start col-6">
                 <div className="my-3">
                     <label for='preco' className="form-label h5">Qual o preço do aluguel?</label>

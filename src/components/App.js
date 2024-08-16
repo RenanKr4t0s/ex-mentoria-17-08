@@ -5,6 +5,7 @@ import {Routes, Route} from 'react-router-dom'
 
 // Componentes que temos
 import NavBarSimple from './NavBarSimple';
+import Home from './home';
 import Ex1 from './ex1';
 import Ex2 from './ex2';
 import Ex3 from './ex3';
@@ -19,10 +20,10 @@ function App() {
 
   return (
     <div>
-      <NavBarSimple siteName="Ex. Mentoria 17-08-2024" domRouter/>
+      <NavBarSimple siteName="Mentoria 17-08" domRouter/>
       <Routes>
       <Route path='/' element={
-          <h1>Esse é o Home</h1>
+          <Home />
         } />
         <Route path='/ex1' element={
           <Ex1 />

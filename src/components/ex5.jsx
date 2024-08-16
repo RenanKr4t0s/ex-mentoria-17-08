@@ -45,6 +45,7 @@ function Ex5(){
                     <li>Industrial: R$800,00 para os primeiros 100 m³ gastos mais R$0,04 por m³ gastos além dos 100 m³;</li>
                 </ol>
             </div>
+            {resultado !== null && <h1 className="alert alert-info col-5 mx-5">O valor a ser pago é de R${resultado.toFixed(2)} </h1>}
             <form onSubmit={handleSubmit} className="p-2 container mx-5 row text-start col-6">
                 <h5> Selecione o tipo de propriedade:</h5>
                 <div class="form-check col-4">
@@ -96,7 +97,6 @@ function Ex5(){
 
                 <button className="btn btn-primary col-4" type="submit">Enviar</button>
             </form>
-            {resultado !== null && <h1>O valor a ser pago é de R${resultado.toFixed(2)} </h1>}
         </div>
     )
 }
