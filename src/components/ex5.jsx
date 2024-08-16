@@ -22,7 +22,7 @@ function Ex5(){
         }
         function industrialCalc(){
             let calculado = 0
-            consumo<100? calculado = 800 : calculado = ((consumo-100)*0.4)+800
+            consumo<100? calculado = 800 : calculado = ((consumo-100)*0.04)+800
             return calculado
         }
 
@@ -36,7 +36,9 @@ function Ex5(){
         <div>
             <div className="enunciado">
                 <h1>Exercício 5</h1>
-                <h2>Cálculo de consumo de água por m³ seguindo:</h2>
+                <h2>Consumo de água por m³.</h2>
+                <br />
+                <h4>Regras de cobrança:</h4>
                 <ol>
                     <li>Residencial: R$5,00 de taxa mais R$0,05 por m³ gastos no total;</li>
                     <li>Comercial: R$500,00 para os primeiros 80 m³ gastos mais R$0,25 por m³ gastos além dos 80 m³;</li>
@@ -94,7 +96,7 @@ function Ex5(){
 
                 <button className="btn btn-primary col-4" type="submit">Enviar</button>
             </form>
-            {resultado !== null && <h1>O valor a ser pago é de R${resultado} </h1>}
+            {resultado !== null && <h1>O valor a ser pago é de R${resultado.toFixed(2)} </h1>}
         </div>
     )
 }
