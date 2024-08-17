@@ -1,8 +1,6 @@
 // Header.js
 import React from 'react';
 import navArray from "./navBarComp/toFurfill/navArray"
-import NavItemDrop from "./navBarComp/navItemDrop"
-import {dropItens, dropName} from "./navBarComp/toFurfill/navArrayDrop"
 
 export default function NavBarSimple({siteName, domRouter}){
   return (

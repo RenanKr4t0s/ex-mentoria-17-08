@@ -38,14 +38,6 @@ function Ex6(){
             const calculado = (desconto * preco) * increase
             setResultado(calculado);
         }
-        
-        // if (selectedOption === "Lançamento") {
-        //      sesIncrease(1.15);
-        // } else if (selectedOption === "Comum") {
-        //      sesIncrease(1);
-        // }
-        // setResultado(calculado);
-        // console.log(resultado);
     }
     return(
         <div>
@@ -94,33 +86,34 @@ function Ex6(){
                         onChange={(e)=>setDia(Number(e.target.value))}
                         required 
                         className="form-control my-2" name='dia'/>
+
                     <h5> Selecione a categoria de filme:</h5>
-                    <div class="form-check col-4">
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            value="Comum"
-                            checked={selectedOption === 'Comum'}
-                            onChange={handleOptionChange}
-                        />
-                        <label class="form-check-label" for="flexCheckDefault">
+                    <div className="form-check col-4">
+                        <label className="form-check-label" for="flexCheckDefault">
                             Comum
+                            <input
+                                className="form-check-input"
+                                type="radio"
+                                value="Comum"
+                                checked={selectedOption === 'Comum'}
+                                onChange={handleOptionChange}
+                                label="Comum"
+                            />
                         </label>
                     </div>
-                    <div class="form-check col-4">
-                        <input
-                            class="form-check-input"
-                            type="radio"
-                            value="Lançamento"
-                            checked={selectedOption === 'Lançamento'}
-                            onChange={handleOptionChange}
-                        />
-                        <label class="form-check-label" for="flexCheckDefault">
+                    <div className="form-check col-4">
+                        <label className="form-check-label" for="flexCheckDefault">
                             Lançamento
+                            <input
+                                className="form-check-input"
+                                type="radio"
+                                value="Lançamento"
+                                checked={selectedOption === 'Lançamento'}
+                                onChange={handleOptionChange}
+                            />
                         </label>
                     </div>
                 </div>
-
                 <button className="btn btn-primary col-4" type="submit">Calcular</button>
             </form>
         </div>

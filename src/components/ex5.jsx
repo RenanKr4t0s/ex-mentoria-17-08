@@ -48,39 +48,39 @@ function Ex5(){
             {resultado !== null && <h1 className="alert alert-info col-5 mx-5">O valor a ser pago é de R${resultado.toFixed(2)} </h1>}
             <form onSubmit={handleSubmit} className="p-2 container mx-5 row text-start col-6">
                 <h5> Selecione o tipo de propriedade:</h5>
-                <div class="form-check col-4">
+                <div className="form-check col-4">
                     <input
-                        class="form-check-input"
+                        className="form-check-input"
                         type="radio"
                         value="Residencial"
                         checked={selectedOption === 'Residencial'}
                         onChange={handleOptionChange}
                     />
-                    <label class="form-check-label" for="flexCheckDefault">
+                    <label className="form-check-label" for="flexCheckDefault">
                         Residencial
                     </label>
                 </div>
-                <div class="form-check col-4">
+                <div className="form-check col-4">
                     <input
-                        class="form-check-input"
+                        className="form-check-input"
                         type="radio"
                         value="Comercial"
                         checked={selectedOption === 'Comercial'}
                         onChange={handleOptionChange}
                     />
-                    <label class="form-check-label" for="flexCheckDefault">
+                    <label className="form-check-label" for="flexCheckDefault">
                         Comercial
                     </label>
                 </div>
-                <div class="form-check col-4">
+                <div className="form-check col-4">
                     <input
-                        class="form-check-input"
+                        className="form-check-input"
                         type="radio"
                         value="Industrial"
                         checked={selectedOption === 'Industrial'}
                         onChange={handleOptionChange}
                     />
-                    <label class="form-check-label" for="flexCheckDefault">
+                    <label className="form-check-label" for="flexCheckDefault">
                         Industrial
                     </label>
                 </div>
